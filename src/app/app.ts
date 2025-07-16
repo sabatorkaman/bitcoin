@@ -1,9 +1,12 @@
 import {Component} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {Coin2} from './coin2/coin2';
+import {Coin} from './coin/coin';
+
+// import {Coin} from './coin/coin';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Coin2, Coin],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

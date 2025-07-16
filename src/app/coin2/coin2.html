@@ -2,12 +2,10 @@
   <p-table [value]="products"
            [totalRecords]="total"
            [lazy]="true"
-           [paginator]="true"
            [rows]="limit"
            [showCurrentPageReport]="true"
-           [tableStyle]="{ 'min-width': '50rem' }"
+           [tableStyle]="{ 'min-width': '10rem' }"
            currentPageReportTemplate="Showing {first} to {last} of {} entries"
-           (onPage)="pageChange($event)"
            [rowsPerPageOptions]="[5,10, 25, 50,100]">
     <ng-template #header>
       <tr>
@@ -33,4 +31,16 @@
       <p-button type="button" icon="pi pi-cloud" text/>
     </ng-template>
   </p-table>
+
 </div>
+
+
+<div>
+  <p-button (click)="next()">next</p-button>
+  <p-button (click)="perv()">perv</p-button>
+</div>
+<p-button (click)="changeData('1')"> 1</p-button>
+<p-button (click)="changeData('2')"> 2</p-button>
+<p-button (click)="changeData('3')"> 3</p-button>
+<p-button (click)="changeData('4')"> 4</p-button>
+
